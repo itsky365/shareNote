@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .wrap {
+            display: flex;
+        }
+        .left {
+            width: 200px;
+            background-color: #ddd;
+            align-self: stretch;
+        }
+        .body {
+            flex: 1;
+            background-color: #CCC;
+        }
+        .body-wrap {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+
+        }
+        .fixed {
+            flex: 100px;
+            width: 100%;
+            height: 100px;
+            background-color: #fff;
+            align-self: flex-start;
+        }
+        .fixed-end {
+            flex: 80px;
+            width: 100%;
+            background-color: #fff;
+            align-self: flex-start;
+        }
+        .content {
+            flex: 1;
+            align-self: stretch;
+            /*height: 1000px;*/
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="wrap">
+    <div class="left">left</div>
+    <div class="body">
+        <div class="body-wrap">
+            <div class="fixed">
+                我是固定通栏我是固定通栏我是固定通栏
+            </div>
+            <div class="content">
+                <p>1我是第一段</p>
+                <p>2我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+                <!--<p>我是第一段</p>-->
+                <!--<p>我是第一段</p>-->
+                <!--<p>我是第一段</p>-->
+                <!--<p>我是第一段</p>-->
+                <!--<p>我是第一段</p>-->
+                <!--<p>我是第一段</p>-->
+                <!--<p>我是第一段</p>-->
+                <!--<p>我是第一段</p>-->
+                <p>我是第一段</p>
+                <p>我是第一段</p>
+            </div>
+            <div class="fixed-end">
+                我是固定通栏我是固定通栏我是固定通栏
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

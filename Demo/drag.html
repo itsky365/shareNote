@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #dragItem {
+            /*float: left;*/
+            width: 200px;
+            height: 400px;
+            margin-right: 50px;
+            background-color: #8dbdf1;
+        }
+        #dragItem a {
+            display: block;
+            line-height: 40px;
+            color: #c00;
+        }
+        #dropWrap {
+            /*float: left;*/
+            width: 400px;
+            height: 400px;
+            background-color: #3288e6;
+            position: relative;
+        }
+        #testMove {
+            width: 100px;
+            height: 100px;
+            background-color: #777777;
+        }
+    </style>
+</head>
+<body>
+
+<div id="dragItem">
+    <div>
+        <a href="javascript:;" class="item1" draggable="true">图片</a>
+        <a href="javascript:;" class="item2" draggable="true">名片</a>
+        <a href="javascript:;" class="item3" draggable="true">纸盒</a>
+    </div>
+</div>
+
+<div id="testMove">我要移动</div>
+
+<div id="dropWrap">
+
+</div>
+
+
+<script>
+
+    function nodeMove(e) {
+        var node = e.target;
+        node.style.top = e.offsetY + 'px';
+        node.style.left = e.offsetX + 'px';
+    }
+
+    var dragItem = document.getElementById('dragItem');
+    var dragItemA = dragItem.getElementsByTagName('a');
+    for (var i in dragItemA) {
+        dragItemA[i].ondragstart = function (e) {
+            e.dataTransfer.effectAllowed = 'copy';
+            e.dataTransfer.setData('itemId', e.target.className);
+        }
+    }
+
+    var dropWrap = document.getElementById('dropWrap');
+
+    dropWrap.ondragover = function (e) {
+        e.preventDefault()
+    };
+
+    dropWrap.ondrop = function (e) {
+        e.preventDefault();
+
+        var id = e.dataTransfer.getData('itemId');
+        e.dataTransfer.dropEffect = 'copy';
+        console.log(id);
+        var idNode = document.getElementsByClassName(id)[0].cloneNode(true);
+        idNode.style.position = 'absolute';
+        idNode.style.top = e.offsetY + 'px';
+        idNode.style.left = e.offsetX + 'px';
+//        idNode.setAttribute('contenteditable', true);
+        console.log(idNode.style);
+
+        e.target.appendChild(idNode);
+
+//        idNode.onmouseenter = nodeMove;
+    };
+
+//    dropWrap.onmousemove = function (e) {
+//        var cx = e.clientX;
+//        var cy = e.clientY;
+//        var ox = e.offsetX;
+//        var oy = e.offsetY;
+//        console.log(cx, cy, ox, oy);
+//    }
+
+    var testMove = document.getElementById('testMove');
+    testMove.onmouseenter = function (e) {
+        var px = e.pageX;
+        var py = e.pageY;
+        console.log(px, py);
+    }
+</script>
+
+</body>
+</html>

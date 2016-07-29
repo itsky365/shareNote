@@ -1,0 +1,11 @@
+<div class="ngdialog-message">
+    <h1>我是template内容</h1>
+    <div ng-repeat="item in data">
+        <h2>{{item.title}}</h2>
+        <p>{{item.username}}</p>
+        <!--<p>我是静态</p>-->
+    </div>
+</div>
+<div class="ngdialog-buttons">
+    <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="closeThisDialog()">关闭</button>
+</div>
