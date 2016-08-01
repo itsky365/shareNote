@@ -44,7 +44,9 @@
     apt-get install libv8-dev
 
 2) 下载plv8.git
-https://github.com/plv8/plv8/releases
+
+plv8版本 https://github.com/plv8/plv8/releases
+
 9.5.3 请下载最新版 v1.4.8 (1.4版本make成功，1.5版本make出错)
 
 在plv8目录中执行 **make** 后，会生成对应的 _.so .sql .control_
