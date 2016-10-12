@@ -63,3 +63,19 @@ sudo make install
 
 
 # CentOS安装Mosquitto
+
+## 包库依赖
+
+`yum install openssl-devel`
+
+`yum install c-ares-devel`
+
+`yum install libuuid-devel`
+
+`yum install libssl-dev libc-ares-dev uuid-dev daemon openssl-devel`
+
+## 编辑安装
+
+同 Ubuntu安装方法
+
+`make && make install`
