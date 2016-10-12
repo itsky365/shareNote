@@ -2,32 +2,33 @@
 
 ## 包库依赖
 
-编译找不到openssl/ssl.h
+编译找不到openssl/ssl.h 
 
-安装openssl
+安装openssl 
 
-sudo apt-get install libssl-dev
+sudo apt-get install libssl-dev 
 
-编译过程找不到ares.h
+编译过程找不到ares.h 
 
-sudo apt-get install libc-ares-dev
+sudo apt-get install libc-ares-dev 
 
-编译过程找不到uuid/uuid.h
+编译过程找不到uuid/uuid.h 
 
-sudo apt-get install uuid-dev
+sudo apt-get install uuid-dev 
 
-使用过程中找不到libmosquitto.so.1
+使用过程中找不到libmosquitto.so.1 
 
-error while loading shared libraries: libmosquitto.so.1: cannot open shared object file: No such file or directory
+error while loading shared libraries: libmosquitto.so.1: cannot open shared object file: No such file or directory 
 
-修改libmosquitto.so位置
+修改libmosquitto.so位置 
 
-创建链接
-sudo ln -s /usr/local/lib/libmosquitto.so.1 /usr/lib/libmosquitto.so.1
+创建链接 
 
-更新动态链接库
+sudo ln -s /usr/local/lib/libmosquitto.so.1 /usr/lib/libmosquitto.so.1 
 
-sudo ldconfig
+更新动态链接库 
+
+sudo ldconfig 
 
 
 ## 编辑安装
