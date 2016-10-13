@@ -23,3 +23,7 @@
 _倾斜_
 
 `代码块`
+
+```
+(function () { console.log("hello"); });
+```
