@@ -24,6 +24,6 @@ _倾斜_
 
 `代码块`
 
-```
+```javascript
 (function () { console.log("hello"); });
 ```
