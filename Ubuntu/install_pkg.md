@@ -85,7 +85,10 @@ apt-get install -y libxml2-dev libxslt1-dev
 
 # docker
 # tar.xz
-apt-get install xz-utils bzip2 libbz2-dev  
+apt-get install -y xz-utils bzip2 libbz2-dev  
 
 # configure
-apt-get install gcc  
+apt-get install -y gcc  
+
+# Erlang
+apt-get install -y erlang
