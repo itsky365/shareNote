@@ -10,3 +10,8 @@ go get github.com/satori/go.uuid
 # Redis
 
 go get github.com/garyburd/redigo
+
+# json
+
+go get github.com/tidwall/gjson  
+get a json value quickly  
