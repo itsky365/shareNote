@@ -10,11 +10,13 @@ go get github.com/satori/go.uuid
 # Redis
 
 go get github.com/garyburd/redigo
+
 go get github.com/go-redis/redis `推荐`
 
 # json
 
 go get github.com/tidwall/gjson    `get a json value quickly`
+
 go get github.com/pquerna/ffjson    `推荐 ffson以3倍优势完胜golang内置json序列化`
 
 # xlxs
