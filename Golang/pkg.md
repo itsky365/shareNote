@@ -33,3 +33,6 @@ go get github.com/PuerkitoBio/goquery  `go语言版本的jquery`
 
 # grequests
 go get github.com/levigross/grequests `go语言版本的request`
+
+# exif
+go get github.com/xiam/exif  `Golang (Go) bindings for libexif`
