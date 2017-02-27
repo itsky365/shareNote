@@ -31,6 +31,10 @@ make install
 
 `gm display` 输出内容则安装成功
 
+* ubuntu
+
+同上安装步聚
+
 * node
 
 npm i -g gm
