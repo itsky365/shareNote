@@ -10,3 +10,20 @@
 ```
 EGG_SERVER_ENV=prod nohup node dispatch.js > stdout.log 2> stderr.log &
 ```
+
+## 插件
+
+* egg-development-proxyagent
+
+默认只在本地开发环境才开启，如果需要在其他环境开启，在应用的 plugin.js 中配置：
+```
+// config/plugin.js
+exports.proxyagent = {
+    enable: true,
+    package: 'egg-development-proxyagent',
+    env: ['local', 'prod'] // 开启多环境
+};
+```
+但不推荐在生产环境开启
+
+web查看运行anyproxy `http://anyproxy.io/cn/`
