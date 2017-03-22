@@ -27,3 +27,52 @@ exports.proxyagent = {
 但不推荐在生产环境开启
 
 web查看运行anyproxy `http://anyproxy.io/cn/`
+
+### 内置指令
+
+- 使用 `npm run lint` 来做代码风格检查。
+- 使用 `npm run autod` 来自动检测依赖更新，详细参见 [autod](https://www.npmjs.com/package/autod) 。
+
+### 验证码（改用java版，无须安装）
+
+执行如下命令
+
+```
+npm install cnpm -g --registry=https://registry.npm.taobao.org
+
+cnpm install node-gyp -g
+
+cnpm install ccap
+```
+
+> centos
+
+* yum install gcc-c++
+
+https://github.com/DoubleSpout/ccap
+
+
+### 生产环境启动node
+
+使用 nohup 运行node 后台运行
+```
+cd awifi-np-show
+
+EGG_SERVER_ENV=prod nohup node index.js > np-show20170220.log 2>&1 &
+```
+
+后台运行日志分开记录
+
+EGG_SERVER_ENV=prod nohup node index.js > stdout.log 2> stderr.log &
+
+代理抓包
+
+EGG_SERVER_ENV=prod http_proxy=http://127.0.0.1:8888 nohup node index.js > stdout.log 2> stderr.log &
+
+# 日志级别
+ENV=prod
+记录 logger.info 以上
+
+ENV=dev
+记录 logger.debug 以上
+
