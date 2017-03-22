@@ -28,10 +28,11 @@ exports.proxyagent = {
 
 web查看运行anyproxy `http://anyproxy.io/cn/`
 
-### 内置指令
+## 内置指令
 
 - 使用 `npm run lint` 来做代码风格检查。
 - 使用 `npm run autod` 来自动检测依赖更新，详细参见 [autod](https://www.npmjs.com/package/autod) 。
+
 
 ### 验证码（改用java版，无须安装）
 
@@ -69,7 +70,8 @@ EGG_SERVER_ENV=prod nohup node index.js > stdout.log 2> stderr.log &
 
 EGG_SERVER_ENV=prod http_proxy=http://127.0.0.1:8888 nohup node index.js > stdout.log 2> stderr.log &
 
-# 日志级别
+### 日志级别
+
 ENV=prod
 记录 logger.info 以上
 
