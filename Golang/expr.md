@@ -28,7 +28,7 @@ func main() {
 }
 // untyped float
 // 1550
-'''
+```
 
 第三方包
 
