@@ -3,10 +3,11 @@
 
 * eos/scripts/eosio_build_ubuntu.sh
 
-	CPU_CORE=4
-	JOBS=2
+CPU_CORE=4
+	
+JOBS=2
   
-  源代码取值为空,导致一直编译失败,也不提示
+源代码取值为空,导致一直编译失败,也不提示
 
 * 安装成功
 
